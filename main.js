@@ -153,6 +153,7 @@ let karten = [
         wert: "Koenig",
         numWert: 13
     }, {
+
         farbe: "Pik",
         wert: "Ass",
         numWert: 14
