@@ -3,8 +3,7 @@ let karten = [
         farbe: "Karo",
         wert: 2,
         numWert: 2
-    },
-    {
+    }, {
         farbe: "Karo",
         wert: 3,
         numWert: 3
