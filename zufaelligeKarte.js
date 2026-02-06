@@ -10,4 +10,5 @@ let kartenSpiel = karten
 function zufaelligeKarteZiehen(randomNumber){
     let Karte = kartenSpiel[randomNumber]
 
+
 }
