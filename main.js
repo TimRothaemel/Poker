@@ -104,5 +104,57 @@ let karten = [
         farbe: "Kreuz",
         wert: "Ass",
         numWert: 14
+    }, {
+        farbe: "Pik",
+        wert: 2,
+        numWert: 2
+    }, {
+        farbe: "Pik",
+        wert: 3,
+        numWert: 3
+    }, {
+        farbe: "Pik",
+        wert: 4,
+        numWert: 4
+    }, {
+        farbe: "Pik",
+        wert: 5,
+        numWert: 5
+    }, {
+        farbe: "Pik",
+        wert: 6,
+        numWert: 6
+    }, {
+        farbe: "Pik",
+        wert: 7,
+        numWert: 7
+    }, {
+        farbe: "Pik",
+        wert: 8,
+        numWert: 8
+    }, {
+        farbe: "Pik",
+        wert: 9,
+        numWert: 9
+    }, {
+        farbe: "Pik",
+        wert: 10,
+        numWert: 10
+    }, {
+        farbe: "Pik",
+        wert: "Bube",
+        numWert: 11
+    }, {
+        farbe: "Pik",
+        wert: "Dame",
+        numWert: 12
+    }, {
+        farbe: "Pik",
+        wert: "Koenig",
+        numWert: 13
+    }, {
+        farbe: "Pik",
+        wert: "Ass",
+        numWert: 14
     }
 ]
