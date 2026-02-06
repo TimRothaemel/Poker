@@ -9,7 +9,6 @@ let kartenSpiel = karten
 function zufaelligeKarteZiehen(randomNumber){
     let Karte = kartenSpiel[randomNumber]
 
-
 }
 function kartenWeg(randomNumber){
     kartenSpiel.slice(randomNumber, 1 )
