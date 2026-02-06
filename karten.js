@@ -1,4 +1,4 @@
-export let karten = [
+export const karten = [
     {
         farbe: "Karo",
         wert: 2,
