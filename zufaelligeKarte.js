@@ -6,3 +6,8 @@
 import {karten} from "./karten";
 
 let kartenSpiel = karten
+function kartenWeg(randomNumber){
+    kartenSpiel.slice(randomNumber, 1 )
+    console.log(randomNumber)
+}
+kartenWeg()
