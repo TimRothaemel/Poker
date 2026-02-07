@@ -3,16 +3,24 @@
 // karte abziehen
 // Kartenstapel für karten im Spiel
 
-import {karten} from "./karten";
+import {karten} from "./karten.js";
 
 let kartenSpiel = karten
-function zufaelligeKarteZiehen(randomNumber){
-    let Karte = kartenSpiel[randomNumber]
 
+zufaelligeKarteZiehen()
+function zufaelligeKarteZiehen(){
+    let randomNumber = zufealligeZahl()
+    let Karte = kartenSpiel[randomNumber]
+    kartenWeg(randomNumber)
+    console.log("Zufällige Karte: " , Karte)
 }
 function kartenWeg(randomNumber){
-    kartenSpiel.slice(randomNumber, 1 )
-    console.log(randomNumber)
+    kartenSpiel.splice(randomNumber, 1 )
+    console.log(kartenSpiel, kartenSpiel.length)
 }
-kartenWeg()
 
+function zufealligeZahl(){
+    let randomNumber = Math.floor(Math.random() * kartenSpiel.length)
+    console.log("Random Zahl: " + randomNumber)
+    return randomNumber
+}
