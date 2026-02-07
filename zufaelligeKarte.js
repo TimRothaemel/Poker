@@ -1,26 +1,23 @@
-// random karte
-// random Zahl
-// karte abziehen
-// Kartenstapel für karten im Spiel
+import { karten } from "./karten.js"; // importieren der Karten aus karten.js
 
-import {karten} from "./karten.js";
+let kartenSpiel = karten; // Kartenstapel für karten im Spiel, wird mit karten aus karten.js gefüllt
 
-let kartenSpiel = karten
-
-zufaelligeKarteZiehen()
-function zufaelligeKarteZiehen(){
-    let randomNumber = zufealligeZahl()
-    let Karte = kartenSpiel[randomNumber]
-    kartenWeg(randomNumber)
-    console.log("Zufällige Karte: " , Karte)
+export function zufaelligeKarteZiehen() {
+  // Funktion zum Ziehen einer zufälligen Karte
+  let randomNumber = zufealligeZahl();
+  let Karte = kartenSpiel[randomNumber];
+  kartenWeg(randomNumber);
+  console.log("Zufällige Karte: ", Karte);
 }
-function kartenWeg(randomNumber){
-    kartenSpiel.splice(randomNumber, 1 )
-    console.log(kartenSpiel, kartenSpiel.length)
+function kartenWeg(randomNumber) {
+  // Funktion zum Entfernen der gezogenen Karte aus dem Kartenstapel
+  kartenSpiel.splice(randomNumber, 1);
+  console.log(kartenSpiel, kartenSpiel.length);
 }
 
-function zufealligeZahl(){
-    let randomNumber = Math.floor(Math.random() * kartenSpiel.length)
-    console.log("Random Zahl: " + randomNumber)
-    return randomNumber
+function zufealligeZahl() {
+  // Funktion zum Generieren einer zufälligen Zahl basierend auf der Länge des Kartenstapels
+  let randomNumber = Math.floor(Math.random() * kartenSpiel.length);
+  console.log("Random Zahl: " + randomNumber);
+  return randomNumber;
 }
