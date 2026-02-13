@@ -8,6 +8,7 @@ export function zufaelligeKarteZiehen() {
   let Karte = kartenSpiel[randomNumber];
   kartenWeg(randomNumber);
   console.log("Zufällige Karte: ", Karte);
+  return Karte
 }
 function kartenWeg(randomNumber) {
   // Funktion zum Entfernen der gezogenen Karte aus dem Kartenstapel
