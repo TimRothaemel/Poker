@@ -21,4 +21,3 @@ function zufaelligeZahl() {
   console.log("Random Zahl: " + randomNumber);
   return randomNumber;
 }
-zufaelligeKarteZiehen()
