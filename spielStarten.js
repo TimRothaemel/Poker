@@ -5,12 +5,15 @@ import {karten} from "./karten.js";  // importieren der Karten aus karten.js
 import {zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der zufaelligeKarteZiehen Funktion aus zufaelligeKarteZiehen.js
 
 
-//Spieler erstellt
-let spieler1
-let spieler2
+
 
 function kartenVerteilen(){
-    spieler1 = zufaelligeKarteZiehen()
-    spieler1.push = zufaelligeKarteZiehen()
-    console.log(spieler1)
+    let spieler1 = []
+    spieler1.unshift(zufaelligeKarteZiehen())
+    spieler1.unshift(zufaelligeKarteZiehen())
+    console.log("Karten des Spieler 1",spieler1)
+    let spieler2 = []
+    spieler2.unshift(zufaelligeKarteZiehen())
+    spieler2.unshift(zufaelligeKarteZiehen())
+    console.log("Karten des Spieler 2",spieler2)
 }
