@@ -8,3 +8,9 @@ import {zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der 
 //Spieler erstellt
 let spieler1
 let spieler2
+
+function kartenVerteilen(){
+    spieler1 = zufaelligeKarteZiehen()
+    spieler1.push = zufaelligeKarteZiehen()
+    console.log(spieler1)
+}
