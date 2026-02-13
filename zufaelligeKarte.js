@@ -4,7 +4,7 @@ let kartenSpiel = karten; // Kartenstapel für karten im Spiel, wird mit karten 
 
 export function zufaelligeKarteZiehen() {
   // Funktion zum Ziehen einer zufälligen Karte
-  let randomNumber = zufealligeZahl();
+  let randomNumber = zufaelligeZahl();
   let Karte = kartenSpiel[randomNumber];
   kartenWeg(randomNumber);
   console.log("Zufällige Karte: ", Karte);
@@ -15,9 +15,10 @@ function kartenWeg(randomNumber) {
   console.log(kartenSpiel, kartenSpiel.length);
 }
 
-function zufealligeZahl() {
+function zufaelligeZahl() {
   // Funktion zum Generieren einer zufälligen Zahl basierend auf der Länge des Kartenstapels
   let randomNumber = Math.floor(Math.random() * kartenSpiel.length);
   console.log("Random Zahl: " + randomNumber);
   return randomNumber;
 }
+zufaelligeKarteZiehen()
