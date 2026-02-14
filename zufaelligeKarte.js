@@ -7,7 +7,6 @@ export function zufaelligeKarteZiehen() {
   let randomNumber = zufaelligeZahl();
   let Karte = kartenSpiel[randomNumber];
   kartenWeg(randomNumber);
-  console.log("Zufällige Karte: ", Karte);
   return Karte
 }
 function kartenWeg(randomNumber) {
