@@ -13,12 +13,10 @@ export function zufaelligeKarteZiehen() {
 function kartenWeg(randomNumber) {
   // Funktion zum Entfernen der gezogenen Karte aus dem Kartenstapel
   kartenSpiel.splice(randomNumber, 1);
-  console.log(kartenSpiel, kartenSpiel.length);
 }
 
 function zufaelligeZahl() {
   // Funktion zum Generieren einer zufälligen Zahl basierend auf der Länge des Kartenstapels
   let randomNumber = Math.floor(Math.random() * kartenSpiel.length);
-  console.log("Random Zahl: " + randomNumber);
   return randomNumber;
 }
