@@ -1,13 +1,10 @@
-// Kartenstapel für die Spieler erstellen -> zufällig Karten ziehen (zwei Spieler)
 // Gemeindschaftskarten (ziehen + Array)
 
 import {karten} from "./karten.js";  // importieren der Karten aus karten.js
 import {zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der zufaelligeKarteZiehen Funktion aus zufaelligeKarteZiehen.js
 
 
-
-
-function kartenVerteilen(){
+function kartenZiehen(){
     let spieler1 = []
     spieler1.unshift(zufaelligeKarteZiehen())
     spieler1.unshift(zufaelligeKarteZiehen())
@@ -17,3 +14,14 @@ function kartenVerteilen(){
     spieler2.unshift(zufaelligeKarteZiehen())
     console.log("Karten des Spieler 2",spieler2)
 }
+
+function gemeinschaftsKartenZiehen(){
+    let gemeinschaftsKarten = []
+    gemeinschaftsKarten.unshift(zufaelligeKarteZiehen())
+    gemeinschaftsKarten.unshift(zufaelligeKarteZiehen())
+    gemeinschaftsKarten.unshift(zufaelligeKarteZiehen())
+    console.log("Gemeinschaftskarten: ", gemeinschaftsKarten)
+}
+
+kartenVerteilen()
+gemeinschaftsKartenZiehen()
