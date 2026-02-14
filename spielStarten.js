@@ -23,5 +23,5 @@ function gemeinschaftsKartenZiehen(){
     console.log("Gemeinschaftskarten: ", gemeinschaftsKarten)
 }
 
-kartenVerteilen()
+kartenZiehen()
 gemeinschaftsKartenZiehen()
