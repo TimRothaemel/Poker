@@ -15,14 +15,13 @@ function kartenZiehen(){
     console.log("Karten des Spieler 2",spieler2)
 }
 
-function gemeinschaftsKartenZiehen(){
-let flop1 = zufaelligeKarteZiehen()
-    let flop2= zufaelligeKarteZiehen()
+function gemeinschaftsKartenZiehen() {
+    let flop1 = zufaelligeKarteZiehen()
+    let flop2 = zufaelligeKarteZiehen()
     let flop3 = zufaelligeKarteZiehen()
     let turn = zufaelligeKarteZiehen()
     let river = zufaelligeKarteZiehen()
 }
-
 kartenZiehen()
 gemeinschaftsKartenZiehen()
 
