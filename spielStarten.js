@@ -5,14 +5,18 @@ import {kartenSpiel, zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // imp
 
 
 function kartenZiehen(){
-    let spieler1 = []
-    spieler1.unshift(zufaelligeKarteZiehen())
-    spieler1.unshift(zufaelligeKarteZiehen())
-    console.log("Karten des Spieler 1",spieler1)
-    let spieler2 = []
-    spieler2.unshift(zufaelligeKarteZiehen())
-    spieler2.unshift(zufaelligeKarteZiehen())
-    console.log("Karten des Spieler 2",spieler2)
+    spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+
+    gegner.karten.unshift(zufaelligeKarteZiehen())//Karten des Gegner random ziehen
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    console.log(spieler, gegner)
 }
 
 function gemeinschaftsKartenZiehen() {
