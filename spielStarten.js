@@ -33,3 +33,4 @@ function spielStarten(){
     gemeinschaftsKartenZiehen()
 }
 
+spielStarten()
