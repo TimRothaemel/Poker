@@ -37,5 +37,6 @@ function gemeinschaftsKartenZiehen(){
     console.log("Gemeinschaftskarten: ", gemeinschaftsKarten)
 }
 
+
 kartenZiehen()
 gemeinschaftsKartenZiehen()
