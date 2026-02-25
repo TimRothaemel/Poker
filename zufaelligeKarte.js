@@ -1,6 +1,6 @@
 import { karten } from "./karten.js"; // importieren der Karten aus karten.js
 
-let kartenSpiel = karten; // Kartenstapel für karten im Spiel, wird mit karten aus karten.js gefüllt
+export let kartenSpiel = karten; // Kartenstapel für karten im Spiel, wird mit karten aus karten.js gefüllt
 
 export function zufaelligeKarteZiehen() {
   // Funktion zum Ziehen einer zufälligen Karte
