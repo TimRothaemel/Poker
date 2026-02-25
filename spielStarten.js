@@ -31,5 +31,8 @@ function spielStarten(){
     kartenSpiel = karten;
     kartenZiehen()
     gemeinschaftsKartenZiehen()
+    flopsAufdecken
 }
+
+function flopsAufdecken()
 
