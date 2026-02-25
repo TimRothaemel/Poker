@@ -3,16 +3,30 @@
 import {karten} from "./karten.js";  // importieren der Karten aus karten.js
 import {zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der zufaelligeKarteZiehen Funktion aus zufaelligeKarteZiehen.js
 
+let spieler = {
+    name: "Spieler",
+    chips: 100,
+    karten: []
+}
+let gegner = {
+    name: "Gegner",
+    chips: 100,
+    karten: []
+}
 
 function kartenZiehen(){
-    let spieler1 = []
-    spieler1.unshift(zufaelligeKarteZiehen())
-    spieler1.unshift(zufaelligeKarteZiehen())
-    console.log("Karten des Spieler 1",spieler1)
-    let spieler2 = []
-    spieler2.unshift(zufaelligeKarteZiehen())
-    spieler2.unshift(zufaelligeKarteZiehen())
-    console.log("Karten des Spieler 2",spieler2)
+    spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+    spieler.karten.unshift(zufaelligeKarteZiehen())
+
+    gegner.karten.unshift(zufaelligeKarteZiehen())//Karten des Gegner random ziehen
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    gegner.karten.unshift(zufaelligeKarteZiehen())
+    console.log(spieler, gegner)
 }
 
 function gemeinschaftsKartenZiehen(){
