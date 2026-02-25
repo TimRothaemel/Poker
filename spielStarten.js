@@ -36,3 +36,12 @@ function spielStarten(){
 
 function flopsAufdecken()
 
+let spielerKarte1 = document.getElementById()
+let spielerKarte2 = document.getElementById()
+let gegnerKarte1 = document.getElementById()
+let gegnerKarte2 = document.getElementById()
+let gemeinschaftsKarten1 document.getElementById('flop1')
+let gemeinschaftsKarten2 document.getElementById('flop2')
+let gemeinschaftsKarten3 document.getElementById('flop3')
+let gemeinschaftsKarten4 document.getElementById('turn')
+let gemeinschaftsKarten5 document.getElementById('river')
