@@ -1,5 +1,5 @@
 import {karten} from "./karten.js";  // importieren der Karten aus karten.js
-import {spielKartenGenerieren, zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der zufaelligeKarteZiehen Funktion aus zufaelligeKarteZiehen.js
+import {gemeinschaftsKartenZiehen, spielKartenGenerieren, zufaelligeKarteZiehen} from "./zufaelligeKarte.js";  // importieren der zufaelligeKarteZiehen Funktion aus zufaelligeKarteZiehen.js
 let spielerKarte1 = document.getElementById('karten_spieler1')
 let spielerKarte2 = document.getElementById('karten_spieler2')
 let gegnerKarte1 = document.getElementById('karten_gegner1')
@@ -9,6 +9,9 @@ let gemeinschaftsKarten2 = document.getElementById('flop2')
 let gemeinschaftsKarten3 = document.getElementById('flop3')
 let gemeinschaftsKarten4 = document.getElementById('turn')
 let gemeinschaftsKarten5 = document.getElementById('river')
+
+let gemeinschaftsKarten = gemeinschaftsKartenZiehen()
+console.log(gemeinschaftsKarten)
 
 let spieler = {
     name: "Spieler",
@@ -23,38 +26,23 @@ let gegner = {
 function kartenZiehen(){
     spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
     spieler.karten.unshift(zufaelligeKarteZiehen())
-    spieler.karten.unshift(zufaelligeKarteZiehen())
-    spieler.karten.unshift(zufaelligeKarteZiehen())
-    spieler.karten.unshift(zufaelligeKarteZiehen())
 
     gegner.karten.unshift(zufaelligeKarteZiehen())//Karten des Gegner random ziehen
-    gegner.karten.unshift(zufaelligeKarteZiehen())
-    gegner.karten.unshift(zufaelligeKarteZiehen())
-    gegner.karten.unshift(zufaelligeKarteZiehen())
     gegner.karten.unshift(zufaelligeKarteZiehen())
     console.log(spieler, gegner)
 }
 
-let gemeinschaftsKarten = function gemeinschaftsKartenZiehen() {
-    let flop1 = zufaelligeKarteZiehen()
-    let flop2 = zufaelligeKarteZiehen()
-    let flop3 = zufaelligeKarteZiehen()
-    let turn = zufaelligeKarteZiehen()
-    let river = zufaelligeKarteZiehen()
-    return {flop1, flop2, flop3, turn, river}
-}
 
 function flopsAufdecken(){
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten[0]
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten[1]
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten[2]
-    console.log(gemeinschaftsKarten)
+    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten.flop1[0].farbe
+    gemeinschaftsKarten2.innerHTML = gemeinschaftsKarten.flop2[0].farbe
+    gemeinschaftsKarten3.innerHTML = gemeinschaftsKarten.flop3[0].farbe
 }
 function turnAufdecken(){
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten[3]
+    gemeinschaftsKarten4.innerHTML = gemeinschaftsKarten.turn[0].farbe
 }
 function riverAufdecken(){
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten[4]
+    gemeinschaftsKarten5.innerHTML = gemeinschaftsKarten.river[0].farbe
 }
 
 export function spielStarten(){

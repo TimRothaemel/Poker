@@ -11,7 +11,6 @@ export function zufaelligeKarteZiehen() {
   let Karte = kartenSpiel[randomNumber];
   kartenWeg(randomNumber);
   return Karte
-  console.log(Karte)
 }
 function kartenWeg(randomNumber) {
   // Funktion zum Entfernen der gezogenen Karte aus dem Kartenstapel
@@ -22,4 +21,19 @@ function zufaelligeZahl() {
   // Funktion zum Generieren einer zufälligen Zahl basierend auf der Länge des Kartenstapels
   let randomNumber = Math.floor(Math.random() * kartenSpiel.length);
   return randomNumber;
+}
+
+let flop1 = []
+let flop2 = []
+let flop3 = []
+let turn = []
+let river = []
+
+export function gemeinschaftsKartenZiehen() {
+  flop1.unshift(zufaelligeKarteZiehen())
+  flop2.unshift(zufaelligeKarteZiehen())
+  flop3.unshift(zufaelligeKarteZiehen())
+  turn.unshift(zufaelligeKarteZiehen())
+  river.unshift(zufaelligeKarteZiehen())
+  return {flop1, flop2, flop3, turn, river}
 }
