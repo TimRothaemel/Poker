@@ -1,13 +1,17 @@
 import { karten } from "./karten.js"; // importieren der Karten aus karten.js
 
-export let kartenSpiel = karten; // Kartenstapel für karten im Spiel, wird mit karten aus karten.js gefüllt
-
+export function spielKartenGenerieren(){
+  let spielKarten = karten; // Kartenstapel für karten im Spiel, wird mit karten aus karten.js gefüllt
+  return spielKarten
+}
+let kartenSpiel = spielKartenGenerieren()
 export function zufaelligeKarteZiehen() {
   // Funktion zum Ziehen einer zufälligen Karte
   let randomNumber = zufaelligeZahl();
   let Karte = kartenSpiel[randomNumber];
   kartenWeg(randomNumber);
   return Karte
+  console.log(Karte)
 }
 function kartenWeg(randomNumber) {
   // Funktion zum Entfernen der gezogenen Karte aus dem Kartenstapel
