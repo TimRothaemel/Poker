@@ -32,6 +32,8 @@ let gegner = {
     einsatz: 0
 }
 let pot = 0
+let potAnzeige = document.getElementById("pot-wert")
+potAnzeige.innerText = `Chips: ${pot}`
 function kartenZiehen(){
     spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
     spieler.karten.unshift(zufaelligeKarteZiehen())
