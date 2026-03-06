@@ -9,19 +9,25 @@ let gemeinschaftsKarten2 = document.getElementById('flop2')
 let gemeinschaftsKarten3 = document.getElementById('flop3')
 let gemeinschaftsKarten4 = document.getElementById('turn')
 let gemeinschaftsKarten5 = document.getElementById('river')
+let btnCheck = document.getElementById("btn_checken")
+let spieler_einsatz = document.getElementById('spieler_einsatz')
+let gegner_einsatz = document.getElementById('gegner_einsatz')
 
 let gemeinschaftsKarten = gemeinschaftsKartenZiehen()
+
 console.log(gemeinschaftsKarten)
 
 let spieler = {
     name: "Spieler",
     chips: 100,
-    karten: []
+    karten: [],
+    einsatz: 0
 }
 let gegner = {
     name: "Gegner",
     chips: 100,
-    karten: []
+    karten: [],
+    einsatz: 0
 }
 function kartenZiehen(){
     spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
@@ -53,3 +59,9 @@ export function spielStarten(){
     turnAufdecken()
 }
 
+function einsatzAnzeigen(){
+    spieler_einsatz.innerText=spieler.einsatz
+    gegner_einsatz.innerText=gegner.einsatz
+}
+
+einsatzAnzeigen()
