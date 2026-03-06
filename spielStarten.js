@@ -12,6 +12,8 @@ let gemeinschaftsKarten5 = document.getElementById('river')
 let btnCheck = document.getElementById("btn_checken")
 let spieler_einsatz = document.getElementById('spieler_einsatz')
 let gegner_einsatz = document.getElementById('gegner_einsatz')
+let btnGehen = document.getElementById("btn_mitgehen")
+
 
 let gemeinschaftsKarten = gemeinschaftsKartenZiehen()
 
@@ -61,8 +63,12 @@ export function spielStarten(){
 }
 
 function einsatzAnzeigen(){
-    spieler_einsatz.innerText=spieler.einsatz
+    spieler_einsatz.innerText= `Einsatz: ${spieler.einsatz}`
     gegner_einsatz.innerText=gegner.einsatz
+}
+
+function gehen(){
+
 }
 
 einsatzAnzeigen()

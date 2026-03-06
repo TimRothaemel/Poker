@@ -4,7 +4,6 @@ import {spielStarten} from "./spielStarten.js"; // importiert die Funktion spiel
 spielStarten()
 
 
-
 // 1. Mindesteinsatz (um spiel zu starten)
 // 2. jeder spieler erhält karten (2)
 // 3. erste einsatz (beginnt bei linken spieler), man kann erhöhen, mitgehen oder aussteigen
