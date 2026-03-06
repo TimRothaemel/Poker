@@ -12,4 +12,5 @@ spielStarten()
 // 5. vierte gemeinschaftskarte wird aufgedeckt
 // 6. fünfte gemeinschaftskate wird aufgedeckt, dritte und letze setzrunde
 // 7. wenn nach letzer runde noch mehrere spieler im spiel sind gewinnt beste hand (kriegt das geld)
+//KOMMENTARE SCHREIBEN!!!!
 

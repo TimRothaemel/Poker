@@ -29,6 +29,7 @@ let gegner = {
     karten: [],
     einsatz: 0
 }
+let pot = 0
 function kartenZiehen(){
     spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
     spieler.karten.unshift(zufaelligeKarteZiehen())
@@ -40,20 +41,20 @@ function kartenZiehen(){
 
 
 function flopsAufdecken(){
-    gemeinschaftsKarten1.innerHTML = gemeinschaftsKarten.flop1[0].farbe
-    gemeinschaftsKarten2.innerHTML = gemeinschaftsKarten.flop2[0].farbe
-    gemeinschaftsKarten3.innerHTML = gemeinschaftsKarten.flop3[0].farbe
+    gemeinschaftsKarten1.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop1[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop1[0].wert}</p>`;
+    gemeinschaftsKarten2.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop2[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop2[0].wert}</p>`;
+    gemeinschaftsKarten3.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop3[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop3[0].wert}</p>`;
 }
 function turnAufdecken(){
-    gemeinschaftsKarten4.innerHTML = gemeinschaftsKarten.turn[0].farbe
+    gemeinschaftsKarten4.innerHTML = `<p class="farbe">${gemeinschaftsKarten.turn[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.turn[0].wert}</p>`;
 }
 function riverAufdecken(){
-    gemeinschaftsKarten5.innerHTML = gemeinschaftsKarten.river[0].farbe
+    gemeinschaftsKarten5.innerHTML = `<p class="farbe">${gemeinschaftsKarten.river[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.river[0].wert}</p>`;
 }
 
 export function spielStarten(){
     let kartenSpiel =spielKartenGenerieren();
-    kartenZiehen()
+    kartenZiehen()// jeder spieler erhält zwei Karten
     flopsAufdecken()
     riverAufdecken()
     turnAufdecken()
