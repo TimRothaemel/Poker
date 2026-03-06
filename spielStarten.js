@@ -46,20 +46,25 @@ function flopsAufdecken(){
     gemeinschaftsKarten1.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop1[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop1[0].wert}</p>`;
     gemeinschaftsKarten2.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop2[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop2[0].wert}</p>`;
     gemeinschaftsKarten3.innerHTML = `<p class="farbe">${gemeinschaftsKarten.flop3[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.flop3[0].wert}</p>`;
+    gemeinschaftsKarten4.classList.add('hidden')//fügt die Klasse die sie unsichtbar macht hinzu
+    gemeinschaftsKarten5.classList.add('hidden')//fügt die Klasse die sie unsichtbar macht hinzu
+
+
 }
 function turnAufdecken(){
     gemeinschaftsKarten4.innerHTML = `<p class="farbe">${gemeinschaftsKarten.turn[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.turn[0].wert}</p>`;
+    gemeinschaftsKarten4.classList.remove('hidden')//entfernt die Klasse die sie unsichtbar macht
 }
 function riverAufdecken(){
     gemeinschaftsKarten5.innerHTML = `<p class="farbe">${gemeinschaftsKarten.river[0].farbe}</p><br><p class="wert">${gemeinschaftsKarten.river[0].wert}</p>`;
+    gemeinschaftsKarten5.classList.remove('hidden')//entfernt die Klasse die sie unsichtbar macht
 }
 
 export function spielStarten(){
     let kartenSpiel =spielKartenGenerieren();
     kartenZiehen()// jeder spieler erhält zwei Karten
     flopsAufdecken()
-    riverAufdecken()
-    turnAufdecken()
+
 }
 
 function einsatzAnzeigen(){
