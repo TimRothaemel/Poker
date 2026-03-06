@@ -74,6 +74,7 @@ function einsatzAnzeigen(){
     gegner_einsatz.innerText=gegner.einsatz
 }
 
+
 function gehen(){
 
 }
