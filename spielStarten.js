@@ -23,6 +23,7 @@ let gegner = {
     chips: 100,
     karten: []
 }
+let pot = 0
 function kartenZiehen(){
     spieler.karten.unshift(zufaelligeKarteZiehen())//Karten des Spilers random ziehen
     spieler.karten.unshift(zufaelligeKarteZiehen())
@@ -47,7 +48,7 @@ function riverAufdecken(){
 
 export function spielStarten(){
     let kartenSpiel =spielKartenGenerieren();
-    kartenZiehen()
+    kartenZiehen()// jeder spieler erhält zwei Karten
     flopsAufdecken()
     riverAufdecken()
     turnAufdecken()
